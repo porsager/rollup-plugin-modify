@@ -1,0 +1,23 @@
+{
+  "name": "rollup-plugin-modify",
+  "version": "1.0.0",
+  "description": "Modify rollup output with find / replace dynamically",
+  "main": "index.js",
+  "keywords": [
+    "rollup-plugin",
+    "replace",
+    "find",
+    "regex",
+    "regexp",
+    "modify",
+    "codemod",
+    "magic-string",
+    "transform"
+  ],
+  "license": "WTFPL",
+  "author": "Rasmus Porsager <rasmus@porsager.com>",
+  "repository": "porsager/rollup-plugin-modify",
+  "dependencies": {
+    "magic-string": "0.25.1"
+  }
+}
