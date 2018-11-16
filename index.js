@@ -4,11 +4,12 @@ const escapeRegExp = x => x.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&')
 
 module.exports = function modify({
   find,
-  replace
+  replace,
+  sourcemap = true
 }) {
   return {
     name: 'modify',
-    transformChunk: (source, options) => {
+    transform: (source, id) => {
       find = new RegExp(typeof find === 'string' ? escapeRegExp(find) : find, 'g')
       if (!find.test(source))
         return source
@@ -29,7 +30,7 @@ module.exports = function modify({
 
       return {
         code: s.toString(),
-        map: options.sourcemap ? s.generateMap() : null
+        map: sourcemap ? s.generateMap() : null
       }
     }
   }
