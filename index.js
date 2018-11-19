@@ -12,7 +12,7 @@ module.exports = function modify({
     transform: (source, id) => {
       find = new RegExp(typeof find === 'string' ? escapeRegExp(find) : find, 'g')
       if (!find.test(source))
-        return source
+        return
 
       const s = new MagicString(source)
 
