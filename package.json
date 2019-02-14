@@ -3,6 +3,9 @@
   "version": "2.0.1",
   "description": "Modify rollup output with find / replace dynamically",
   "main": "index.js",
+  "scripts": {
+    "test": "ospec test"
+  },
   "keywords": [
     "rollup-plugin",
     "replace",
@@ -18,6 +21,7 @@
   "author": "Rasmus Porsager <rasmus@porsager.com>",
   "repository": "porsager/rollup-plugin-modify",
   "dependencies": {
-    "magic-string": "0.25.1"
+    "magic-string": "0.25.2",
+    "ospec": "3.1.0"
   }
 }

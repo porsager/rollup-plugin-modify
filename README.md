@@ -10,6 +10,7 @@ Modify rollup output with find / replace dynamically.
 npm i rollup-plugin-modify
 ```
 
+Explicit single using find, replace keys
 ```js
 import modify from 'rollup-plugin-modify'
 
@@ -18,6 +19,20 @@ export default {
     modify({
       find: String | RegExp,
       replace: String | Function
+    })
+  ]
+}
+```
+
+Terse multiple using key, value
+```
+import modify from 'rollup-plugin-modify'
+
+export default {
+  plugins: [
+    modify({
+      'find this text': 'replace with this here',
+      'process.env.PORT': 5000
     })
   ]
 }
@@ -48,3 +63,4 @@ modify({
   replace: (match, path) => JSON.stringify(fs.readFileSync(path, 'utf8'))
 })
 ```
+
